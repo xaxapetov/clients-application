@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  postgresql_clients:
+    image: 'postgres:13.1-alpine'
+    container_name: postgresql_clients
+    hostname: postgresql
+    ports:
+      - '15432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=pg_clients_test_db
